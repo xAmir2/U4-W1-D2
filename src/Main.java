@@ -5,7 +5,7 @@ import exercise4.Ex4;
 
 public class Main {
     static void main(String[] args) {
-        System.out.println(Ex1.leapYear(2024));
+        System.out.println(Ex1.leapYear(2100));
         System.out.println(Ex1.oddOrEven(10));
         System.out.println(Ex2.numberSpelling());
         System.out.println(Ex3.commaString());
