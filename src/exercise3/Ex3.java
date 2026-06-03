@@ -1,20 +1,19 @@
-package Ex3;
+package exercise3;
 
-import java.util.Objects;
 import java.util.Scanner;
 
 public class Ex3 {
-    public static String str() {
+    public static String commaString() {
         System.out.println("Enter a text");
         Scanner sc = new Scanner(System.in);
         String str = sc.nextLine();
 
-        while (!Objects.equals(str, ":q")) {
-            String words = str.replace("", ",");
+        while (!str.equals(":q")) {
+            String words = String.join(",", str.split(""));
             System.out.println(words);
             System.out.println("Enter a text or you can end the loop by typing :q");
             str = sc.nextLine();
         }
-        return str;
+        return "Thanks for testing!";
     }
 }
