@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 public class Ex4 {
     public static String launch() {
+        System.out.println("How many seconds to launch? (max 20)");
         Scanner sc = new Scanner(System.in);
         int a = sc.nextInt();
         if (a > 20) {
@@ -11,19 +12,19 @@ public class Ex4 {
         } else if (a < 0) {
             a = 20;
         }
-        String s = "Seconds to launch  " + a + "\n";
+        StringBuilder s = new StringBuilder("Seconds to launch  " + a + "\n");
 
         for (int i = a; i >= 1; i--) {
             if (i % 2 == 0) {
-                s += "[OK]" + i + "\n";
+                s.append("[OK]").append(i).append("\n");
             } else {
-                s += "[CHECK]" + i + "\n";
+                s.append("[CHECK]").append(i).append("\n");
             }
             if (i == 10) {
-                s += "-------- Radio --------" + "\n";
+                s.append("-------- Stage Separation --------" + "\n");
             }
         }
-        s += "-------- Launch time --------";
-        return s;
+        s.append("-------- 🚀Launch time🚀 --------");
+        return s.toString();
     }
 }
